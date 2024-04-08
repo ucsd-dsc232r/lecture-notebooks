@@ -9,11 +9,14 @@
 
 ## Option 1: Docker
 1. Install Docker from https://docs.docker.com/get-docker/. MAKE SURE TO DOWNLOAD THE APPROPRIATE ONE FOR YOUR OPERATING SYSTEM.
-2. Open Docker's desktop application. 
+
+2. Open Docker's desktop application (You do NOT need to sign in to Docker).
+
 3. Also open Terminal and run the following command to download and install the PySpark image on your personal device: 
     ```bash
     docker pull jupyter/pyspark-notebook:x86_64-ubuntu-22.04
     ```
+
 4. Make sure you have `git` installed, and an account with GitHub. Download this repository via `git` (https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git). You can run the following command on Terminal in the location where you want to clone the repository.
     ```bash
     git clone https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git
@@ -39,6 +42,7 @@ To run PySpark locally, install Java, Spark, and Python first if you don't have 
 ### Create Environment and Install Dependencies
 After you have done the above, proceed to create a Python environment for the course from the `requirements.txt` file given here. You're free to do this any other way if you're comfortable, but we recommend the below:
 1) Install Anaconda from https://www.anaconda.com/download. You can refer to https://docs.anaconda.com/free/anaconda/install/index.html for installation instructions. MAKE SURE TO DOWNLOAD THE APPROPRIATE ONE FOR YOUR OPERATING SYSTEM.
+
 2) Once anaconda is downloaded and the conda command is working in your terminal (refer to installation instructions), confirm that `conda activate base` command works (this should activate your `base` environment).
 3) Run the following (replace `<your-environment-name>` with a name for your environment, I used `DSC232R`):  
     ```bash
@@ -53,4 +57,4 @@ After you have done the above, proceed to create a Python environment for the co
     ```bash
     pip install -r requirements.txt
     ```
-This should create your environment with all necessary packages.
+    This should create your environment with all necessary packages.
