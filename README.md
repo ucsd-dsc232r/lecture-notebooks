@@ -31,6 +31,12 @@
     ```
 7. This will generate a URL of the form: `http://127.0.0.1:8888/lab?token=<unique-token>` where your Jupyter server will be running. Just copy and paste that URL in your browser and it will launch the Jupyter Hub.
 
+8. Open Terminal in Jupyter Hub. Run the following command:
+    ```bash
+    pip install -r requirements_docker.txt
+    ```
+    This should install all necessary packages.
+
 ---
 ---
 
