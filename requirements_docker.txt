@@ -1,0 +1,15 @@
+astropy
+boto3
+dists
+ipyleaflet
+plot-utils
+pydiffmap
+pydot
+pydotplus
+resnet
+torch==1.13.1
+torchmetrics==0.11.4
+xgboost==1.6.2
+pylab-utils
+lightning==1.9.5
+pytorch-lightning==1.9.5
