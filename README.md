@@ -25,9 +25,11 @@
     ```bash
     HOSTDIR=~/Desktop/lecture-notebooks/
     ```
+    Make sure that there are no spaces in your path.
+
 6. Finally, run the Docker image using the following command:
     ```bash
-    docker run -p 8888:8888 -v $HOSTDIR:/home/jovyan docker.io/jupyter/pyspark-notebook:x86_64-ubuntu-22.04
+    docker run -p 127.0.0.1:8888:8888 -v $HOSTDIR:/home/jovyan docker.io/jupyter/pyspark-notebook:x86_64-ubuntu-22.04
     ```
 7. This will generate a URL of the form: `http://127.0.0.1:8888/lab?token=<unique-token>` where your Jupyter server will be running. Just copy and paste that URL in your browser and it will launch the Jupyter Hub.
 
@@ -36,6 +38,8 @@
     pip install -r requirements_docker.txt
     ```
     This should install all necessary packages.
+
+9. After you are done with your work, you can stop the Container from the Docker desktop application. Similarly, you can start the Container next time using the Docker desktop application.
 
 ---
 ---
