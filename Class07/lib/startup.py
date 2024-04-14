@@ -14,7 +14,7 @@ from pyspark import SparkContext
 from lib import sparkConfig
 import yaml
 
-yaml_handle=open('environ.yaml','r')
+yaml_handle=open('lib/environ.yaml','r')
 yaml_content=yaml.safe_load(yaml_handle)
 weather_data=yaml_content['weather_data']
 
