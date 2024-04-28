@@ -1,9 +1,7 @@
 import numpy as np
 import xgboost as xgb
-import matplotlib.pyplot as plt
+from matplotlib.pyplot import *
 from sklearn.metrics import roc_curve
-
-import XGBHelper as xgbh
 
 def plot_log(Log):
     figure(figsize=(12,5))
@@ -13,7 +11,7 @@ def plot_log(Log):
         for dataset in ['eval','train']:
             _label='%s-%s'%(dataset,loss)
             plot(Log[dataset][loss],label=_label)
-        _argmin=argmin(Log['eval'][loss])
+        _argmin=np.argmin(Log['eval'][loss])
         _min=Log['eval'][loss][_argmin]
         _title=f"min of eval-{loss}={_min} at {_argmin}"
         title(_title)
