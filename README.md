@@ -8,7 +8,7 @@
 ---
 
 ## Option 1: Docker
-NOTE: Refer option 1.2 below for using docker on Apple Silicon.
+NOTE: Refer option 1.2 below for using docker on MacOS.
 1. Install Docker from https://docs.docker.com/get-docker/. MAKE SURE TO DOWNLOAD THE APPROPRIATE ONE FOR YOUR OPERATING SYSTEM.
 
 2. Open Docker's desktop application (You do NOT need to sign in to Docker).
@@ -45,7 +45,7 @@ NOTE: Refer option 1.2 below for using docker on Apple Silicon.
 ---
 ---
 
-## Option 1.2: Docker For Apple Silicon
+## Option 1.2: Docker For MacOS
 1. Install Docker from https://docs.docker.com/get-docker/. MAKE SURE TO DOWNLOAD THE APPROPRIATE ONE FOR YOUR OPERATING SYSTEM.
 
 2. Open Docker's desktop application (You do NOT need to sign in to Docker).
