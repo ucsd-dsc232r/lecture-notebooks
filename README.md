@@ -8,6 +8,7 @@
 ---
 
 ## Option 1: Docker
+NOTE: Refer option 1.2 below for using docker on Apple Silicon.
 1. Install Docker from https://docs.docker.com/get-docker/. MAKE SURE TO DOWNLOAD THE APPROPRIATE ONE FOR YOUR OPERATING SYSTEM.
 
 2. Open Docker's desktop application (You do NOT need to sign in to Docker).
@@ -29,13 +30,50 @@
 
 6. Finally, run the Docker image using the following command:
     ```bash
-    docker run -p 127.0.0.1:8888:8888 -v $HOSTDIR:/home/jovyan docker.io/jupyter/pyspark-notebook:x86_64-ubuntu-22.04
+    docker run -p 127.0.0.1:8888:8888 -v $HOSTDIR:/home/jovyan jupyter/pyspark-notebook:latest
     ```
 7. This will generate a URL of the form: `http://127.0.0.1:8888/lab?token=<unique-token>` where your Jupyter server will be running. Just copy and paste that URL in your browser and it will launch the Jupyter Hub.
 
 8. Open Terminal in Jupyter Hub. Run the following command:
     ```bash
-    pip install -r requirements_docker.txt
+    pip install -r requirements_docker_mac.txt
+    ```
+    This should install all necessary packages.
+
+9. After you are done with your work, you can stop the Container from the Docker desktop application. Similarly, you can start the Container next time using the Docker desktop application.
+
+---
+---
+
+## Option 1.2: Docker For Apple Silicon
+1. Install Docker from https://docs.docker.com/get-docker/. MAKE SURE TO DOWNLOAD THE APPROPRIATE ONE FOR YOUR OPERATING SYSTEM.
+
+2. Open Docker's desktop application (You do NOT need to sign in to Docker).
+
+3. Also open Terminal and run the following command to download and install the PySpark image on your personal device: 
+    ```bash
+    docker pull jupyter/pyspark-notebook:latest
+    ```
+
+4. Make sure you have `git` installed, and an account with GitHub. Download this repository via `git` (https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git). You can run the following command on Terminal in the location where you want to clone the repository.
+    ```bash
+    git clone https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git
+    ```
+5. After the image is downloaded and installed, define your `HOSTDIR` on Terminal. This is the absolute path in your personal computer's filesystem to the Lecture Notebooks. So, this will be the location where you downloaded/cloned this GitHub repository. For example, if you clone this repository on Desktop, your path will be `~/Desktop/lecture-notebooks/`, i.e.,
+    ```bash
+    HOSTDIR=~/Desktop/lecture-notebooks/
+    ```
+    Make sure that there are no spaces in your path.
+
+6. Finally, run the Docker image using the following command:
+    ```bash
+    docker run -p 127.0.0.1:8888:8888 -v $HOSTDIR:/home/jovyan jupyter/pyspark-notebook:latest
+    ```
+7. This will generate a URL of the form: `http://127.0.0.1:8888/lab?token=<unique-token>` where your Jupyter server will be running. Just copy and paste that URL in your browser and it will launch the Jupyter Hub.
+
+8. Open Terminal in Jupyter Hub. Run the following command:
+    ```bash
+    pip install -r requirements_docker_mac.txt
     ```
     This should install all necessary packages.
 
