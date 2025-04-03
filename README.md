@@ -7,7 +7,7 @@
 ---
 ---
 
-## Option 1: Docker
+<!-- ## Option 1: Docker
 NOTE: Refer option 1.2 below for using docker on MacOS.
 1. Install Docker from https://docs.docker.com/get-docker/. MAKE SURE TO DOWNLOAD THE APPROPRIATE ONE FOR YOUR OPERATING SYSTEM.
 
@@ -30,7 +30,7 @@ NOTE: Refer option 1.2 below for using docker on MacOS.
 
 6. Finally, run the Docker image using the following command:
     ```bash
-    docker run -p 127.0.0.1:8888:8888 -v $HOSTDIR:/home/jovyan jupyter/pyspark-notebook:latest
+    docker run -p 127.0.0.1:8888:8888 -v $HOSTDIR:/home/jovyan jupyter/pyspark-notebook:x86_64-ubuntu-22.04
     ```
 7. This will generate a URL of the form: `http://127.0.0.1:8888/lab?token=<unique-token>` where your Jupyter server will be running. Just copy and paste that URL in your browser and it will launch the Jupyter Hub.
 
@@ -43,9 +43,9 @@ NOTE: Refer option 1.2 below for using docker on MacOS.
 9. After you are done with your work, you can stop the Container from the Docker desktop application. Similarly, you can start the Container next time using the Docker desktop application.
 
 ---
----
+--- -->
 
-## Option 1.2: Docker For MacOS
+## Option 1: Docker
 1. Install Docker from https://docs.docker.com/get-docker/. MAKE SURE TO DOWNLOAD THE APPROPRIATE ONE FOR YOUR OPERATING SYSTEM.
 
 2. Open Docker's desktop application (You do NOT need to sign in to Docker).
@@ -73,7 +73,7 @@ NOTE: Refer option 1.2 below for using docker on MacOS.
 
 8. Open Terminal in Jupyter Hub. Run the following command:
     ```bash
-    pip install -r requirements_docker_mac.txt
+    pip install -r requirements_docker.txt
     ```
     This should install all necessary packages.
 
