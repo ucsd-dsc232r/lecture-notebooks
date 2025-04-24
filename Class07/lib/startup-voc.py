@@ -18,6 +18,10 @@ yaml_handle=open('lib/environ-voc.yaml','r')
 yaml_content=yaml.safe_load(yaml_handle)
 weather_data=yaml_content['weather_data']
 
+import os
+os.environ["PYSPARK_PYTHON"]="python3"
+os.environ["PYSPARK_DRIVER_PYTHON"] = "python3"
+
 sc = SparkContext(master="local[2]",pyFiles=['lib.tgz'])
 print('sparkContext=',sc)
 print()
