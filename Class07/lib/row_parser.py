@@ -90,4 +90,4 @@ def parse(row):
             D.append(parser(items[start]))
         else:
             D.append(parser(items[start:end]))
-    return RowObject(*D
+    return RowObject(*D)
