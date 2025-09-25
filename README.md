@@ -18,9 +18,9 @@ NOTE: Refer option 1.2 below for using docker on MacOS.
     docker pull jupyter/pyspark-notebook:x86_64-ubuntu-22.04
     ```
 
-4. Make sure you have `git` installed, and an account with GitHub. Download this repository via `git` (https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git). You can run the following command on Terminal in the location where you want to clone the repository.
+4. Make sure you have `git` installed, and an account with GitHub. Download this repository via `git` (https://github.com/ucsd-dsc232r/lecture-notebooks.git). You can run the following command on Terminal in the location where you want to clone the repository.
     ```bash
-    git clone https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git
+    git clone https://github.com/ucsd-dsc232r/lecture-notebooks.git
     ```
 5. After the image is downloaded and installed, define your `HOSTDIR` on Terminal. This is the absolute path in your personal computer's filesystem to the Lecture Notebooks. So, this will be the location where you downloaded/cloned this GitHub repository. For example, if you clone this repository on Desktop, your path will be `~/Desktop/lecture-notebooks/`, i.e.,
     ```bash
@@ -55,9 +55,9 @@ NOTE: Refer option 1.2 below for using docker on MacOS.
     docker pull jupyter/pyspark-notebook:latest
     ```
 
-4. Make sure you have `git` installed, and an account with GitHub. Download this repository via `git` (https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git). You can run the following command on Terminal in the location where you want to clone the repository.
+4. Make sure you have `git` installed, and an account with GitHub. Download this repository via `git` (https://github.com/ucsd-dsc232r/lecture-notebooks.git). You can run the following command on Terminal in the location where you want to clone the repository.
     ```bash
-    git clone https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git
+    git clone https://github.com/ucsd-dsc232r/lecture-notebooks.git
     ```
 5. After the image is downloaded and installed, define your `HOSTDIR` on Terminal. This is the absolute path in your personal computer's filesystem to the Lecture Notebooks. So, this will be the location where you downloaded/cloned this GitHub repository. For example, if you clone this repository on Desktop, your path will be `~/Desktop/lecture-notebooks/`, i.e.,
     ```bash
@@ -97,9 +97,9 @@ After you have done the above, proceed to create a Python environment for the co
     conda create -n <your-environment-name> python=3.7.5
     conda activate <your-environment-name>
     ```
-4) Make sure you have `git` installed, and an account with GitHub. Download this repository via `git` (https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git). You can run the following command on Terminal in the location where you want to clone the repository.
+4) Make sure you have `git` installed, and an account with GitHub. Download this repository via `git` (https://github.com/ucsd-dsc232r/lecture-notebooks.git). You can run the following command on Terminal in the location where you want to clone the repository.
     ```bash
-    git clone https://github.com/ucsd-dsc232r-s24/lecture-notebooks.git
+    git clone https://github.com/ucsd-dsc232r/lecture-notebooks.git
     ```
 5) Navigate to the folder location where you have downloaded this repository. Then, run 
     ```bash
