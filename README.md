@@ -63,12 +63,23 @@ NOTE: Refer option 1.2 below for using docker on MacOS.
     ```bash
     HOSTDIR=~/Desktop/lecture-notebooks/
     ```
+    **For Windows (PowerShell) Users:**
+    Navigate to the folder where you cloned the repository and set the `HOSTDIR` variable to your current working directory by running:
+    ```powershell
+    $env:HOSTDIR = pwd
+    ```
     Make sure that there are no spaces in your path.
 
 6. Finally, run the Docker image using the following command:
     ```bash
     docker run -p 127.0.0.1:8888:8888 -v $HOSTDIR:/home/jovyan jupyter/pyspark-notebook:latest
     ```
+    **For Windows (PowerShell) Users:**
+    Run the following command instead to properly bind your directory:
+    ```powershell
+    docker run -p 127.0.0.1:8888:8888 -v "${env:HOSTDIR}:/home/jovyan/work" jupyter/pyspark-notebook:latest
+    ```
+    
 7. This will generate a URL of the form: `http://127.0.0.1:8888/lab?token=<unique-token>` where your Jupyter server will be running. Just copy and paste that URL in your browser and it will launch the Jupyter Hub.
 
 8. Open Terminal in Jupyter Hub. Run the following command:
