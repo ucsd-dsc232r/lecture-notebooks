@@ -59,23 +59,28 @@ NOTE: Refer option 1.2 below for using docker on MacOS.
     ```bash
     git clone https://github.com/ucsd-dsc232r/lecture-notebooks.git
     ```
-5. After the image is downloaded and installed, define your `HOSTDIR` on Terminal. This is the absolute path in your personal computer's filesystem to the Lecture Notebooks. So, this will be the location where you downloaded/cloned this GitHub repository. For example, if you clone this repository on Desktop, your path will be `~/Desktop/lecture-notebooks/`, i.e.,
+5. After the image is downloaded and installed, define your `HOSTDIR` in your terminal. This is the absolute path in your personal computer's filesystem to the Lecture Notebooks (the location where you downloaded/cloned this GitHub repository). 
+
+    *(Note: Make sure that there are no spaces in your path, regardless of your operating system!)*
+    
+    **For Linux / Windows Subsystem for Linux (WSL) / Mac:**
+    For example, if you cloned this repository to your Desktop, your path will be `~/Desktop/lecture-notebooks/`. Set the variable by running:
     ```bash
     HOSTDIR=~/Desktop/lecture-notebooks/
     ```
-    **For Windows (PowerShell) Users:**
-    Navigate to the folder where you cloned the repository and set the `HOSTDIR` variable to your current working directory by running:
+    
+    **For Windows (PowerShell):**
+    Navigate to the folder where you cloned the repository and set the variable to your current working directory by running:
     ```powershell
     $env:HOSTDIR = pwd
     ```
-    Make sure that there are no spaces in your path.
 
-6. Finally, run the Docker image using the following command:
+6. **For Linux / Windows Subsystem for Linux (WSL) / Mac:** Run the Docker image using the following command:
     ```bash
     docker run -p 127.0.0.1:8888:8888 -v $HOSTDIR:/home/jovyan jupyter/pyspark-notebook:latest
     ```
-    **For Windows (PowerShell) Users:**
-    Run the following command instead to properly bind your directory:
+    
+    **For Windows (PowerShell):** Run the Docker image using the following command:
     ```powershell
     docker run -p 127.0.0.1:8888:8888 -v "${env:HOSTDIR}:/home/jovyan/work" jupyter/pyspark-notebook:latest
     ```
